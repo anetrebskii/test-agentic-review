@@ -10,6 +10,10 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      checks: write
+      statuses: write
+      issues: write
+      actions: read      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
