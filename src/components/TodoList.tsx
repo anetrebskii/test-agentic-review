@@ -16,7 +16,7 @@ const TodoList: React.FC = () => {
     if (inputText.trim() === '') return;
     
     const newTodo: Todo = {
-      id: Date.now(),
+      id: Date.now()
       text: inputText,
       completed: false
     };
