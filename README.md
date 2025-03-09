@@ -31,16 +31,40 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## AI Code Review
+
+This project uses an AI-powered code review system to maintain code quality. The automated code review process is triggered when pull requests are opened or updated.
+
+### How It Works
+
+- When a pull request is opened or updated, the AI code review GitHub Action is triggered
+- The action uses OpenAI's GPT-4 Turbo model to analyze the code changes
+- It provides feedback directly as comments in the pull request
+- Reviews focus on bugs, security issues, performance, and code quality
+
+### Configuration
+
+The code review settings are specified in `.github/code-review-config.yml`. The configuration includes:
+- Files to include/exclude from review
+- AI prompt rules
+- Model settings (token limits, temperature, etc.)
+
+### Requirements
+
+To use the AI code review in your fork, you'll need:
+1. An OpenAI API key stored as a GitHub Secret named `OPENAI_API_KEY`
+2. GitHub workflow permissions to write to pull requests
