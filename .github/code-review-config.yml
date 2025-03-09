@@ -1,0 +1,60 @@
+# AI Code Review Configuration
+# This action reviews only the code changes in pull requests,
+# but also provides file context for better analysis
+
+# Global excludes - These files will always be excluded
+excludeFiles:
+  - '**/node_modules/**'
+  - '**/dist/**'
+  - '**/build/**'
+  - '**/*.min.js'
+  - '**/*.test.ts'
+  - '**/*.spec.ts'
+
+# Model configuration
+model: 'gpt-4-turbo'
+maxTokens: 4096
+temperature: 0.7
+
+# Review rules - Each rule specifies what files to include and what to look for
+# Each prompt should focus on reviewing specific CHANGES rather than entire files
+rules:
+  - include:
+    - '**/*.ts'
+    - '**/*.tsx'
+    prompt: >
+      Review these TypeScript code CHANGES focusing on type safety, proper interface usage, 
+      and adherence to TypeScript best practices. Look for potential null/undefined issues, 
+      incorrect typing, and opportunities to improve type definitions.
+
+  - include:
+    - '**/*.js'
+    - '**/*.jsx'
+    prompt: >
+      Review these JavaScript code CHANGES focusing on potential runtime errors, variable scope issues,
+      and modern JavaScript practices. Check for proper error handling, async/await usage,
+      and potential memory leaks.
+
+  - include:
+    - '**/*.css'
+    - '**/*.scss'
+    prompt: >
+      Review these CSS/SCSS code CHANGES focusing on responsive design, maintainability,
+      and CSS best practices. Check for potential specificity issues, browser compatibility concerns,
+      and opportunities to improve style organization.
+
+  - include:
+    - '**/Dockerfile'
+    - '**/*.dockerfile'
+    - '**/docker-compose.yml'
+    prompt: >
+      Review these Docker configuration CHANGES focusing on security best practices, image size optimization,
+      and efficient layer caching. Look for potential security vulnerabilities and inefficient patterns.
+
+  - include:
+    - '**/*.json'
+    - '**/*.yaml'
+    - '**/*.yml'
+    prompt: >
+      Review these configuration file CHANGES focusing on structure, completeness, and potential security issues.
+      Check for unnecessary complexity and ensure the changes follow best practices for configuration management. 
