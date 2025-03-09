@@ -11,10 +11,6 @@ excludeFiles:
   - '**/*.test.ts'
   - '**/*.spec.ts'
 
-# Model configuration
-model: 'gpt-4-turbo'
-maxTokens: 4096
-temperature: 0.7
 
 # Review rules - Each rule specifies what files to include and what to look for
 # Each prompt should focus on reviewing specific CHANGES rather than entire files
