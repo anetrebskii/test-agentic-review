@@ -24,25 +24,19 @@ rules:
     - '**/*.ts'
     - '**/*.tsx'
     prompt: >
-      Review these TypeScript code CHANGES focusing on type safety, proper interface usage, 
-      and adherence to TypeScript best practices. Look for potential null/undefined issues, 
-      incorrect typing, and opportunities to improve type definitions.
+      Review these TypeScript code CHANGES focusing business logic and business rules.
 
   - include:
     - '**/*.js'
     - '**/*.jsx'
     prompt: >
-      Review these JavaScript code CHANGES focusing on potential runtime errors, variable scope issues,
-      and modern JavaScript practices. Check for proper error handling, async/await usage,
-      and potential memory leaks.
+      Review these JavaScript code CHANGES focusing business logic and business rules.
 
   - include:
     - '**/*.css'
     - '**/*.scss'
     prompt: >
-      Review these CSS/SCSS code CHANGES focusing on responsive design, maintainability,
-      and CSS best practices. Check for potential specificity issues, browser compatibility concerns,
-      and opportunities to improve style organization.
+      Review these CSS/SCSS code CHANGES focusing business logic and business rules.
 
   - include:
     - '**/Dockerfile'
