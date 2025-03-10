@@ -13,7 +13,7 @@ jobs:
       checks: write
       statuses: write
       issues: write
-      actions: read
+      actions: read      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -24,6 +24,4 @@ jobs:
         uses: anetrebskii/agentic-review@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
-          config-path: '.github/code-review-config.yml'
-          model: 'gpt-4o-mini'
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}          
