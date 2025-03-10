@@ -13,9 +13,10 @@ excludeFiles:
   - '**/*.yml'
 
 # Model configuration
-model: 'gpt-4-turbo'
+model: 'gpt-4o-mini'
 maxTokens: 4096
 temperature: 0.7
+commentThreshold: 50
 
 # Review rules - Each rule specifies what files to include and what to look for
 # Each prompt should focus on reviewing specific CHANGES rather than entire files
