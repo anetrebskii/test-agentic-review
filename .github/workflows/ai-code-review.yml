@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  ACTIONS_STEP_DEBUG: true
+
 jobs:
   code-review:
     runs-on: ubuntu-latest

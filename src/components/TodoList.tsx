@@ -17,7 +17,7 @@ const TodoList: React.FC = () => {
     
     const newTodo: Todo = {
       id: Date.now(),
-      text: inputText,
+      text: inputText + ' date: ' + Date.now(),
       completed: false
     };
     

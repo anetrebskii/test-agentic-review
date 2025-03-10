@@ -10,6 +10,7 @@ excludeFiles:
   - '**/*.min.js'
   - '**/*.test.ts'
   - '**/*.spec.ts'
+  - '**/*.yml'
 
 # Model configuration
 model: 'gpt-4o-mini'
