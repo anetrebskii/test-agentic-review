@@ -24,7 +24,9 @@ rules:
     - '**/*.ts'
     - '**/*.tsx'
     prompt: >
-      Review these TypeScript code CHANGES focusing business logic and business rules.
+      - One method should be responsible for one thing
+      - Typescript code should be clean and easy to understand
+      - Exclude cyclomatic complexity > 15      
 
   - include:
     - '**/*.js'
