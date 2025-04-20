@@ -24,7 +24,8 @@ rules:
     - '**/*.ts'
     - '**/*.tsx'
     prompt: >
-      - One method should be responsible for one thing
+      - Focus only on business logic and big issues
+      - One method should be responsible for one thing      
       - Typescript code should be clean and easy to understand
       - Exclude cyclomatic complexity > 15      
 
