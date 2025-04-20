@@ -21,7 +21,7 @@ jobs:
           fetch-depth: 0
 
       - name: AI Code Review
-        uses: anetrebskii/agentic-review@main
+        uses: anetrebskii/agentic-review@v2.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}          
